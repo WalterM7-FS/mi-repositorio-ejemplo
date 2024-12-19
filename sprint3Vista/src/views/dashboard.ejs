@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    <title>Lista de Superhéroes</title>
+</head>
+<body>
+    <h1>Lista de todos los Superhéroes</h1>
+<ul>
+    <% superheroes.forEach(superheroe => { %>
+        <li class="border border-black font-serif italic text-cyan-700 align-baseline text-justify p-3">
+            
+            <a href="/heroe/
+                <%= superheroe._id %>"> 
+                Nombre del Superhéroe: <%=superheroe.nombreSuperHeroe%>,
+                Nombre Real: <%=superheroe.nombreReal%>,
+                Edad: <%=superheroe.edad%>,
+                Planeta de Origen: <%=superheroe.planetaOrigen%>,
+                Debilidad: <%=superheroe.debilidad%>,
+                poderes: <%=superheroe.poderes%>,
+                Aliados: <%=superheroe.aliados%>,
+                Enemigos: <%=superheroe.enemigos%>
+            
+            
+            </a>
+            
+
+        <form action="deleteid" method="post">
+            <input type="hidden" name="_id" value="<%=superheroe._id%>">
+            
+            <button class="border border-black font-serif italic text-cyan-700 align-baseline text-justify p-3" type="submit" onclick="return confirm('¿Confirma eliminar el Superhéroe?')">
+                Eliminar Superhéroe
+            </button>
+        </form>
+        
+        <form action="editarid" method="post">
+            <input type="hidden" name="_id" value="<%=superheroe._id%>">
+            
+            <button class="border border-black font-serif italic text-cyan-700 align-baseline text-justify p-3" type="submit">
+                Editar Superhéroe
+            </button>
+        </form>
+        
+        
+           
+        </li>
+        <% }); %>
+</ul>
+
+<a href="crear" class="border border-black font-serif italic text-cyan-700 align-baseline text-justify p-3">Crear un Superhéroe</a>
+
+
+</body>
+</html>
