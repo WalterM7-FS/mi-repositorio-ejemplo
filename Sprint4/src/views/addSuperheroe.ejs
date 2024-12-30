@@ -1,0 +1,30 @@
+
+
+<body>
+    
+
+    <form action="update/crear"  method="post" autocomplete="on">
+    
+        <fieldset>
+            <legend>Ingreso de los datos del Superhéroe a crear:</legend>
+            
+            <div>
+                <label for="nombreSuperHeroe">Nombre del Superhéroe: </label>
+                <input type="text" minlength="3" maxlength="60" id="nombreSuperHeroe" name="nombreSuperHeroe" size="40" required placeholder="Nombre del Superhéroe" value="<%= SuperHero.nombreSuperHeroe %>">
+
+            </div>   
+               <p class="p-2">Nombre Real: <input type="text" minlength="3" maxlength="60" id="nombreReal" name="nombreReal" size="40" required placeholder="Nombre Real del Superhéroe" value="<%= SuperHero.nombreReal %>"> </p>
+               <p class="p-2">edad: <input type="number" min="0" id="edad" name="edad" size="40" required placeholder="Edad del Superhéroe" value="<%= SuperHero.edad %>"> </p>
+               <p class="p-2">Planeta Origen: <input type="text" id="planetaOrigen" name="planetaOrigen" size="40" value="<%= SuperHero.planetaOrigen %>"></p>
+               <p class="p-2">Debilidad: <input type="text" id="debilidad" name="debilidad" size="40" value="<%= SuperHero.debilidad %>"></p>
+               <p class="p-2">Poderes: <input type="text" id="poderes" name="poderes" size="40" required placeholder="Poderes del Superhéroe" value="<%= SuperHero.poderes %>"></p>
+               <p class="p-2">Aliados: <input type="text" id="aliados" name="aliados" size="40" value="<%= SuperHero.aliados %>"></p>
+               <p class="p-2">Enemigos: <input type="text" id="enemigos" name="enemigos" size="40" value="<%= SuperHero.enemigos %>"></p>
+               
+               
+                   
+                <input  type="submit" value="Crear">
+    
+        </fieldset>
+    </form>
+</body>

@@ -1,0 +1,27 @@
+
+<body>
+    
+    <form action="update/<%= superheroe._id %>" method="post" name="editarid">
+        
+        <fieldset >
+            <legend>Datos del Superhéroe  a editar:</legend>
+       
+               
+            <p>Nombre del Superhéroe: <%= superheroe.nombreSuperHeroe %> (id: <%= superheroe._id %>)</p>
+               <p class="p-2">Nombre del Superhéroe<input type="text" minlength="3" maxlength="60" id="nombreSuperHeroe" name="nombreSuperHeroe" size="40" required placeholder="<%= superheroe.nombreSuperHeroe %>" value="<%= superheroe.nombreSuperHeroe %>"></p>
+               <p class="p-2">Nombre Real: <input type="text" minlength="3" maxlength="60" id="nombreReal" name="nombreReal" size="40" required placeholder="<%= superheroe.nombreReal %>" value="<%= superheroe.nombreReal %>"> </p>
+               <p class="p-2">edad: <input type="number" min="0" id="edad" name="edad" size="40" required placeholder="<%= superheroe.edad %>" value="<%= superheroe.edad %>"> </p>
+               <p class="p-2">Planeta Origen: <input type="text" id="planetaOrigen" name="planetaOrigen" size="40" placeholder="<%= superheroe.planetaOrigen %>" value="<%= superheroe.planetaOrigen %>"></p>
+               <p class="p-2">Debilidad: <input type="text" id="debilidad" name="debilidad" size="40" placeholder="<%= superheroe.debilidad %>" value="<%= superheroe.debilidad %>"></p>
+               <p class="p-2">Poderes: <input type="text" id="poderes" name="poderes" size="40" required placeholder="<%= superheroe.poderes %>" value="<%= superheroe.poderes %>"></p>
+               <p class="p-2">Aliados: <input type="text" id="aliados" name="aliados" size="40" placeholder="<%= superheroe.aliados %>" value="<%= superheroe.aliados %>"></p>
+               <p class="p-2">Enemigos: <input type="text" id="enemigos" name="enemigos" size="40" placeholder="<%= superheroe.enemigos %>" value="<%= superheroe.enemigos %>"></p>
+               
+               
+                <input type="submit" value="Modificar">
+    
+        </fieldset>
+        </form>
+
+</body>
+</html>

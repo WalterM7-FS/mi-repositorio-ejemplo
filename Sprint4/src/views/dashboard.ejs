@@ -1,0 +1,51 @@
+<body>
+    <h1>Lista de todos los Superhéroes</h1>
+<ul>
+    <% superheroes.forEach(superheroe => { %>
+        <li>
+            
+            <a href="/heroe/
+                <%= superheroe._id %>"> 
+                Nombre del Superhéroe: <%=superheroe.nombreSuperHeroe%>,
+                Nombre Real: <%=superheroe.nombreReal%>,
+                Edad: <%=superheroe.edad%>,
+                Planeta de Origen: <%=superheroe.planetaOrigen%>,
+                Debilidad: <%=superheroe.debilidad%>,
+                poderes: <%=superheroe.poderes%>,
+                Aliados: <%=superheroe.aliados%>,
+                Enemigos: <%=superheroe.enemigos%>
+            
+            
+            </a>
+            
+
+        <form action="deleteid" method="post">
+            <input type="hidden" name="_id" value="<%=superheroe._id%>">
+            
+            <button type="submit" onclick="return confirm('¿Confirma eliminar el Superhéroe?')">
+                Eliminar Superhéroe
+            </button>
+        </form>
+        
+        <form action="editarid" method="post">
+            <input type="hidden" name="_id" value="<%=superheroe._id%>">
+            
+            <button type="submit">
+                Editar Superhéroe
+            </button>
+        </form>
+        
+        
+           
+        </li>
+        <% }); %>
+</ul>
+
+<a href="crear">
+    <button>
+    Crear un Superhéroe
+    </button>
+</a>
+
+
+</body>
